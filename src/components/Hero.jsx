@@ -24,7 +24,7 @@ export default function Hero() {
                             <span className="block text-brand-accent">Playful Finds</span>
                         </h1>
                         <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
-                            Celebrate this St. Patrick's Day with the luckiest dinosaur around. Grab these exclusive Redbubble stickers before they go extinct!
+                            Discover the Ugly-Cute Menagerie. From deadpan cats to wobbly pups, bring home premium naive crayon art stickers and cozy designs today!
                         </p>
                         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a
@@ -55,7 +55,7 @@ export default function Hero() {
                         >
                             <img
                                 src="/images/sticker4.png"
-                                alt="Pinchy T-Rex"
+                                alt="Ugly-Cute Crayon Art Mascot"
                                 className="w-full h-full object-contain"
                             />
 
