@@ -38,14 +38,14 @@ export default function ProductGallery() {
                             </p>
                         </div>
 
-                        {/* Physical Products Grid (5 items) */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                        {/* Physical Products Grid/Slider (5 items) */}
+                        <div className="flex overflow-x-auto pb-8 -mx-4 px-4 snap-x snap-mandatory hide-scrollbar lg:grid lg:grid-cols-5 lg:gap-6 lg:overflow-visible lg:pb-0 lg:mx-0 lg:px-0 lg:snap-none">
                             {category.items.map((product) => (
                                 <motion.div
                                     key={product.id}
                                     whileHover={{ scale: 1.03, rotate: -1 }}
                                     transition={{ type: "spring", stiffness: 300 }}
-                                    className="flex flex-col bg-[#FFF8F0] p-5 relative group overflow-hidden"
+                                    className="flex-none w-[280px] sm:w-[320px] lg:w-auto flex flex-col bg-[#FFF8F0] p-5 relative group overflow-hidden snap-center mr-4 lg:mr-0"
                                     style={{
                                         border: '2px solid #333333',
                                         borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
