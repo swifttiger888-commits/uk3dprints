@@ -23,19 +23,19 @@ const products = [
     {
         id: 4,
         title: "Going To The Pub",
-        img: "https://ih1.redbubble.net/image.6083420291.3956/st,small,507x507-pad,600x600,f8f8f8.u4.jpg",
+        img: "https://ih1.redbubble.net/image.6086323672.8327/st,small,507x507-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/shop/ap/178838327"
     },
     {
         id: 5,
         title: "Party Capybara",
-        img: "https://ih1.redbubble.net/image.6085364078.4641/pp,504x498-pad,600x600,f8f8f8.u2.jpg",
+        img: "https://ih1.redbubble.net/image.6085389138.5558/st,small,507x507-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/shop/ap/178805558"
     },
     {
         id: 6,
         title: "Retro TV Glitch Llama",
-        img: "https://ih1.redbubble.net/image.6084633424.1269/pp,504x498-pad,600x600,f8f8f8.u4.jpg",
+        img: "https://ih1.redbubble.net/image.6085379621.5056/st,small,507x507-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/shop/ap/178805056"
     }
 ];
