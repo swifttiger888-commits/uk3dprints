@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import ProductGallery from './components/ProductGallery';
 import StickerGrid from './components/StickerGrid';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <StickerGrid />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }
