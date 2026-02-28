@@ -28,16 +28,18 @@ export default function Hero() {
                         </p>
                         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <a
-                                href="#stickers"
+                                href="#boutique"
                                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full text-white bg-brand-accent hover:bg-brand-accentHover transition-all shadow-lg hover:shadow-brand-accent/30 hover:-translate-y-1"
                             >
-                                Shop Stickers
+                                Shop Merch
                             </a>
                             <a
-                                href="#"
+                                href="https://www.redbubble.com/people/nightgrainco/shop"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-full text-brand-text bg-white border border-gray-200 hover:bg-gray-50 hover:border-brand-accent/30 transition-all shadow-sm"
                             >
-                                Learn More
+                                View Redbubble Store
                             </a>
                         </div>
                     </motion.div>

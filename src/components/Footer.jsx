@@ -8,10 +8,13 @@ export default function Footer() {
                 <div className="text-2xl font-extrabold tracking-tight mb-2">
                     Calico<span className="text-brand-accent"> & Cream</span>
                 </div>
-                <p className="text-gray-400 max-w-md mx-auto mb-8">
-                    Spreading prehistoric luck one sticker at a time. Designed for Redbubble with 💚.
+                <p className="text-gray-400 max-w-md mx-auto mb-4">
+                    Explore the Ugly-Cute Menagerie. Premium naive crayon art designs and cozy aesthetic illustrations on 50+ products. Designed for Redbubble with 💚.
                 </p>
-                <div className="text-sm text-gray-500">
+                <div className="sr-only">
+                    Keywords: Naive art merchandise, Ugly-cute home decor, Crayon style t-shirts, Scottish Fold inspired gifts, Hand-drawn animal mugs, cute aesthetic artwork, weird core, quirky stationery, novelty gifts.
+                </div>
+                <div className="text-sm text-gray-500 mb-8">
                     &copy; {new Date().getFullYear()} Calico & Cream. All rights reserved.
                 </div>
             </div>

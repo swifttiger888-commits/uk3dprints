@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "npm run build && wrangler dev",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "add-product": "node scripts/add-product.js"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",

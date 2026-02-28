@@ -6,43 +6,43 @@ const products = [
         id: 1,
         title: "Meerkats Crayon Art",
         img: "https://ih1.redbubble.net/image.6086551990.6018/pp,504x498-pad,600x600,f8f8f8.jpg",
-        link: "https://www.redbubble.com/i/sticker/Scottish-Fold-Cat-Standing-With-Meerkats-Crayon-Art-by-NightGrainCo/178846018.EJUG5"
+        link: "https://www.redbubble.com/shop/ap/178846018"
     },
     {
         id: 2,
         title: "Cat Buddha Sit Deadpan",
         img: "https://ih1.redbubble.net/image.6086534034.5465/st,small,507x507-pad,600x600,f8f8f8.jpg",
-        link: "https://www.redbubble.com/i/sticker/Scottish-Fold-Cat-Buddha-Sit-Deadpan-Crayon-Art-by-NightGrainCo/178845761.EJUG5"
+        link: "https://www.redbubble.com/shop/ap/178845761"
     },
     {
         id: 3,
         title: "T-Rex Stacked Animals",
         img: "https://ih1.redbubble.net/image.6086543238.5761/aps,504x498,small,transparent-pad,600x600,f8f8f8.jpg",
-        link: "https://www.redbubble.com/i/sticker/Funny-T-Rex-Stacked-Animals-St-Patricks-Day-by-NightGrainCo/178845465.EJUG5"
+        link: "https://www.redbubble.com/shop/ap/178845465"
     },
     {
         id: 4,
         title: "Going To The Pub",
         img: "https://ih1.redbubble.net/image.6083420291.3956/st,small,507x507-pad,600x600,f8f8f8.u4.jpg",
-        link: "https://www.redbubble.com/i/sticker/Guess-Whos-Going-To-The-Pub-St-Patricks-Day-by-NightGrainCo/178838327.EJUG5"
+        link: "https://www.redbubble.com/shop/ap/178838327"
     },
     {
         id: 5,
         title: "Party Capybara",
         img: "https://ih1.redbubble.net/image.6085364078.4641/pp,504x498-pad,600x600,f8f8f8.u2.jpg",
-        link: "https://www.redbubble.com/i/sticker/Party-Capybara-Birthday-Hat-Cute-Crayon-by-NightGrainCo/178805558.EJUG5"
+        link: "https://www.redbubble.com/shop/ap/178805558"
     },
     {
         id: 6,
         title: "Retro TV Glitch Llama",
         img: "https://ih1.redbubble.net/image.6084633424.1269/pp,504x498-pad,600x600,f8f8f8.u4.jpg",
-        link: "https://www.redbubble.com/i/sticker/No-Lamma-Retro-TV-Glitch-Funny-Llama-by-NightGrainCo/178805056.EJUG5"
+        link: "https://www.redbubble.com/shop/ap/178805056"
     }
 ];
 
 export default function ProductGallery() {
     return (
-        <section className="py-20 bg-brand-bg relative w-full">
+        <section id="boutique" className="py-20 bg-brand-bg relative w-full">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center mb-16">
@@ -76,21 +76,35 @@ export default function ProductGallery() {
                             </div>
 
                             <div className="text-center mt-auto flex flex-col items-center">
-                                <h3 className="text-xl font-bold text-brand-text mb-6 tracking-tight">
+                                <h3 className="text-xl font-bold text-brand-text mb-2 tracking-tight">
                                     {product.title}
                                 </h3>
+                                <p
+                                    className="text-sm text-brand-text mb-6 opacity-80"
+                                    style={{ fontFamily: "'Chalkboard SE', 'Comic Sans MS', cursive, sans-serif" }}
+                                >
+                                    Available on 50+ items (Mugs, Apparel, Home Decor).
+                                </p>
 
                                 <a
                                     href={product.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={() => {
+                                        window.dataLayer = window.dataLayer || [];
+                                        window.dataLayer.push({
+                                            'event': 'product_click',
+                                            'product_name': product.title,
+                                            'product_id': product.id
+                                        });
+                                    }}
                                     className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold uppercase tracking-widest text-white bg-brand-accent hover:bg-brand-accentHover transition-colors mt-auto"
                                     style={{
                                         borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
                                         border: '1px solid #B07E2F'
                                     }}
                                 >
-                                    Shop on Redbubble
+                                    View Full Collection
                                 </a>
                             </div>
                         </motion.div>

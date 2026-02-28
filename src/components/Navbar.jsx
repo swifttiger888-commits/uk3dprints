@@ -12,16 +12,16 @@ export default function Navbar() {
                         </span>
                     </div>
                     <div className="hidden md:flex space-x-8">
-                        <a href="#" className="text-gray-600 hover:text-brand-accent transition-colors font-medium">Home</a>
-                        <a href="#stickers" className="text-gray-600 hover:text-brand-accent transition-colors font-medium">Shop Stickers</a>
-                        <a href="#" className="text-gray-600 hover:text-brand-accent transition-colors font-medium">About</a>
+                        <a href="/" className="text-gray-600 hover:text-brand-accent transition-colors font-medium">Home</a>
+                        <a href="#boutique" className="text-gray-600 hover:text-brand-accent transition-colors font-medium">Boutique</a>
+                        <a href="https://www.redbubble.com/people/nightgrainco/shop" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-accent transition-colors font-medium">Redbubble Shop</a>
                     </div>
                     <div className="flex items-center">
                         <a
-                            href="#stickers"
+                            href="#boutique"
                             className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-text hover:bg-gray-800 transition-all"
                         >
-                            Explore the Vault
+                            Explore the Boutique
                         </a>
                     </div>
                 </div>
