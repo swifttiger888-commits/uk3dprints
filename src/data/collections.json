@@ -1,0 +1,69 @@
+{
+  "collections": [
+    {
+      "id": "seasonal-favorites",
+      "name": "Seasonal Favorites",
+      "redbubbleLink": "https://www.redbubble.com/people/nightgrainco/shop",
+      "description": "Decorate your laptop, water bottle, or notebook with these high-quality, weather-resistant die-cut stickers.",
+      "items": [
+        {
+          "id": 1,
+          "src": "/images/sticker1.png",
+          "name": "Pot O' Gold Dino",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        },
+        {
+          "id": 2,
+          "src": "/images/sticker2.png",
+          "name": "Cool Shamrock Rex",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        },
+        {
+          "id": 3,
+          "src": "/images/sticker3.png",
+          "name": "Lucky Horseshoe Apatosaurus",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        },
+        {
+          "id": 4,
+          "src": "/images/sticker4.png",
+          "name": "Pinchy T-Rex",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        }
+      ]
+    },
+    {
+      "id": "nightgrain-classics",
+      "name": "NightGrain Classics",
+      "redbubbleLink": "https://www.redbubble.com/people/nightgrainco/shop",
+      "description": "My standard cat illustrations and character designs, perfect for everyday use.",
+      "items": [
+        {
+          "id": 5,
+          "src": "/images/logo.png",
+          "name": "Classic Cat Sticker 1",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        },
+        {
+          "id": 6,
+          "src": "/images/logo.png",
+          "name": "Classic Cat Sticker 2",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        },
+        {
+          "id": 7,
+          "src": "/images/logo.png",
+          "name": "Classic Character Design",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        }
+      ]
+    }
+  ]
+}
