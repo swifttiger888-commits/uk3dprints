@@ -19,9 +19,9 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <a
                             href="#boutique"
-                            className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-text hover:bg-gray-800 transition-all"
+                            className="inline-flex items-center justify-center px-4 py-2 text-xs md:px-6 md:py-2.5 md:text-sm font-semibold rounded-full text-white bg-brand-text hover:bg-gray-800 transition-all text-center leading-tight whitespace-nowrap"
                         >
-                            Explore the Boutique
+                            Explore the<br className="md:hidden" /> Boutique
                         </a>
                     </div>
                 </div>
