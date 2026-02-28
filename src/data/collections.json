@@ -8,29 +8,43 @@
       "items": [
         {
           "id": 1,
-          "src": "/images/sticker1.png",
-          "name": "Pot O' Gold Dino",
+          "src": "https://ih1.redbubble.net/image.6086551990.6018...",
+          "name": "St. Paddy's Dino 1",
           "price": "$3.50",
           "link": "https://www.redbubble.com/people/nightgrainco/shop"
         },
         {
           "id": 2,
-          "src": "/images/sticker2.png",
-          "name": "Cool Shamrock Rex",
+          "src": "https://ih1.redbubble.net/image.6086534034.5465...",
+          "name": "St. Paddy's Dino 2",
           "price": "$3.50",
           "link": "https://www.redbubble.com/people/nightgrainco/shop"
         },
         {
           "id": 3,
-          "src": "/images/sticker3.png",
-          "name": "Lucky Horseshoe Apatosaurus",
+          "src": "https://ih1.redbubble.net/image.6086543238.5761...",
+          "name": "St. Paddy's Dino 3",
           "price": "$3.50",
           "link": "https://www.redbubble.com/people/nightgrainco/shop"
         },
         {
           "id": 4,
-          "src": "/images/sticker4.png",
-          "name": "Pinchy T-Rex",
+          "src": "https://ih1.redbubble.net/image.6083420291.3956...",
+          "name": "St. Paddy's Dino 4",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        },
+        {
+          "id": 5,
+          "src": "https://ih1.redbubble.net/image.6085364078.4641...",
+          "name": "St. Paddy's Dino 5",
+          "price": "$3.50",
+          "link": "https://www.redbubble.com/people/nightgrainco/shop"
+        },
+        {
+          "id": 6,
+          "src": "https://ih1.redbubble.net/image.6084633424.1269...",
+          "name": "St. Paddy's Dino 6",
           "price": "$3.50",
           "link": "https://www.redbubble.com/people/nightgrainco/shop"
         }

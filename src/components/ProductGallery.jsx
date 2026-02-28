@@ -4,20 +4,38 @@ import { motion } from 'framer-motion';
 const products = [
     {
         id: 1,
-        title: "Pinchy T-Rex",
-        img: "/images/sticker4.png",
+        title: "St. Paddy's Dino 1",
+        img: "https://ih1.redbubble.net/image.6086551990.6018...",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     },
     {
         id: 2,
-        title: "Lucky Tri-tops",
-        img: "/images/sticker2.png",
+        title: "St. Paddy's Dino 2",
+        img: "https://ih1.redbubble.net/image.6086534034.5465...",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     },
     {
         id: 3,
-        title: "Clover Neck Bronto",
-        img: "/images/sticker3.png",
+        title: "St. Paddy's Dino 3",
+        img: "https://ih1.redbubble.net/image.6086543238.5761...",
+        link: "https://www.redbubble.com/people/nightgrainco/shop"
+    },
+    {
+        id: 4,
+        title: "St. Paddy's Dino 4",
+        img: "https://ih1.redbubble.net/image.6083420291.3956...",
+        link: "https://www.redbubble.com/people/nightgrainco/shop"
+    },
+    {
+        id: 5,
+        title: "St. Paddy's Dino 5",
+        img: "https://ih1.redbubble.net/image.6085364078.4641...",
+        link: "https://www.redbubble.com/people/nightgrainco/shop"
+    },
+    {
+        id: 6,
+        title: "St. Paddy's Dino 6",
+        img: "https://ih1.redbubble.net/image.6084633424.1269...",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     }
 ];
