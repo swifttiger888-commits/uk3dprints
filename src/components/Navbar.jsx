@@ -21,7 +21,7 @@ export default function Navbar() {
                             href="#stickers"
                             className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full text-white bg-brand-text hover:bg-gray-800 transition-all"
                         >
-                            New Arrivals
+                            Explore the Vault
                         </a>
                     </div>
                 </div>

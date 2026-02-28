@@ -4,37 +4,37 @@ import { motion } from 'framer-motion';
 const products = [
     {
         id: 1,
-        title: "St. Paddy's Dino 1",
+        title: "The Meerkat Trio",
         img: "https://ih1.redbubble.net/image.6086551990.6018/pp,504x498-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     },
     {
         id: 2,
-        title: "St. Paddy's Dino 2",
+        title: "The Grumpy Sheep Rider",
         img: "https://ih1.redbubble.net/image.6086534034.5465/st,small,507x507-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     },
     {
         id: 3,
-        title: "St. Paddy's Dino 3",
+        title: "Sleepy Scottish Fold",
         img: "https://ih1.redbubble.net/image.6086543238.5761/aps,504x498,small,transparent-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     },
     {
         id: 4,
-        title: "St. Paddy's Dino 4",
+        title: "Cactus Friend",
         img: "https://ih1.redbubble.net/image.6083420291.3956/st,small,507x507-pad,600x600,f8f8f8.u4.jpg",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     },
     {
         id: 5,
-        title: "St. Paddy's Dino 5",
+        title: "The Midnight Snack",
         img: "https://ih1.redbubble.net/image.6085364078.4641/pp,504x498-pad,600x600,f8f8f8.u2.jpg",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     },
     {
         id: 6,
-        title: "St. Paddy's Dino 6",
+        title: "Wobbly Pup",
         img: "https://ih1.redbubble.net/image.6084633424.1269/pp,504x498-pad,600x600,f8f8f8.u4.jpg",
         link: "https://www.redbubble.com/people/nightgrainco/shop"
     }
@@ -50,7 +50,7 @@ export default function ProductGallery() {
                         className="text-4xl font-bold text-brand-text mb-4 uppercase tracking-wider inline-block pb-2"
                         style={{ fontFamily: "'Chalkboard SE', 'Comic Sans MS', cursive, sans-serif" }}
                     >
-                        St. Paddy's Dino Collection
+                        THE UGLY-CUTE MENAGERIE
                     </h2>
                 </div>
 
