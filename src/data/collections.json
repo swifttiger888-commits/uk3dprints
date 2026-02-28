@@ -1,81 +1,88 @@
 {
   "collections": [
     {
-      "id": "seasonal-favorites",
-      "name": "Seasonal Favorites",
-      "redbubbleLink": "https://www.redbubble.com/people/nightgrainco/shop",
-      "description": "Decorate your laptop, water bottle, or notebook with these high-quality, weather-resistant die-cut stickers.",
+      "id": "cat-buddha",
+      "name": "Cat Buddha Sit Deadpan",
+      "redbubbleLink": "https://www.redbubble.com/shop/ap/178845761",
+      "description": "Inner peace meets outer derp. The classic Scottish Fold finding zen.",
       "items": [
         {
           "id": 1,
-          "src": "https://ih1.redbubble.net/image.6086551990.6018/pp,504x498-pad,600x600,f8f8f8.jpg",
-          "name": "Meerkats Crayon Art",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178846018"
+          "name": "Cat Buddha Classic T-Shirt",
+          "price": "$22.00",
+          "src": "https://ih1.redbubble.net/image.6086543256.5761/ssrco,classic_tee,mens_02,fafafa:ca443f4786,front,product_square,x600.u1.jpg",
+          "link": "https://www.redbubble.com/i/t-shirt/Scottish-Fold-Cat-Buddha-Sit-Deadpan-Cute-by-NightGrainCo/178845761.WFLAH"
         },
         {
           "id": 2,
-          "src": "https://ih1.redbubble.net/image.6086543238.5761/aps,504x498,small,transparent-pad,600x600,f8f8f8.jpg",
-          "name": "Cat Buddha Sit Deadpan",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178845761"
+          "name": "Cat Buddha Ceramic Mug",
+          "price": "$16.00",
+          "src": "https://ih1.redbubble.net/image.6086543256.5761/mgh-hu-15,x221,w,f8f8f8-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/mug/Scottish-Fold-Cat-Buddha-Sit-Deadpan-Cute-by-NightGrainCo/178845761.9Q0AD"
         },
         {
           "id": 3,
-          "src": "https://ih1.redbubble.net/image.6086534034.5465/st,small,507x507-pad,600x600,f8f8f8.jpg",
-          "name": "T-Rex Stacked Animals",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178845465"
+          "name": "Cat Buddha Tote Bag",
+          "price": "$20.00",
+          "src": "https://ih1.redbubble.net/image.6086543256.5761/tb,13x13-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/tote-bag/Scottish-Fold-Cat-Buddha-Sit-Deadpan-Cute-by-NightGrainCo/178845761.P1QBH"
         },
         {
           "id": 4,
-          "src": "https://ih1.redbubble.net/image.6086323672.8327/st,small,507x507-pad,600x600,f8f8f8.jpg",
-          "name": "Going To The Pub",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178838327"
+          "name": "Cat Buddha Notebook",
+          "price": "$14.00",
+          "src": "https://ih1.redbubble.net/image.6086543256.5761/sn,x1000-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/notebook/Scottish-Fold-Cat-Buddha-Sit-Deadpan-Cute-by-NightGrainCo/178845761.RXH2R"
         },
         {
           "id": 5,
-          "src": "https://ih1.redbubble.net/image.6085389138.5558/st,small,507x507-pad,600x600,f8f8f8.jpg",
-          "name": "Party Capybara",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178805558"
-        },
-        {
-          "id": 6,
-          "src": "https://ih1.redbubble.net/image.6085379621.5056/st,small,507x507-pad,600x600,f8f8f8.jpg",
-          "name": "Retro TV Glitch Llama",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178805056"
+          "name": "Cat Buddha Throw Pillow",
+          "price": "$24.00",
+          "src": "https://ih1.redbubble.net/image.6086543256.5761/tp,16x16-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/throw-pillow/Scottish-Fold-Cat-Buddha-Sit-Deadpan-Cute-by-NightGrainCo/178845761.5X2YF"
         }
       ]
     },
     {
-      "id": "nightgrain-classics",
-      "name": "NightGrain Classics",
-      "redbubbleLink": "https://www.redbubble.com/people/nightgrainco/shop",
-      "description": "My standard cat illustrations and character designs, perfect for everyday use.",
+      "id": "party-capybara",
+      "name": "Party Capybara",
+      "redbubbleLink": "https://www.redbubble.com/shop/ap/178805558",
+      "description": "Ready to celebrate absolutely nothing. The chillest party guest.",
       "items": [
         {
-          "id": 5,
-          "src": "https://ih1.redbubble.net/image.6084633424.1269/st,small,507x507-pad,600x600,f8f8f8.jpg",
-          "name": "Hand-Drawn Calico Cat Crayon Sticker",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178761269"
-        },
-        {
           "id": 6,
-          "src": "https://ih1.redbubble.net/image.6085364112.4641/st,small,507x507-pad,600x600,f8f8f8.jpg",
-          "name": "Sleepy Tabby Cat Aesthetic Crayon Art",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178804641"
+          "name": "Party Capybara Classic T-Shirt",
+          "price": "$22.00",
+          "src": "https://ih1.redbubble.net/image.6085389138.5558/ssrco,classic_tee,womens,fafafa:ca443f4786,front,product_square,x600.u1.jpg",
+          "link": "https://www.redbubble.com/i/t-shirt/Party-Capybara-Birthday-Hat-Cute-Crayon-by-NightGrainCo/178805558.WFLAH"
         },
         {
           "id": 7,
-          "src": "https://ih1.redbubble.net/image.6083420247.3956/st,small,507x507-pad,600x600,f8f8f8.jpg",
-          "name": "Funny Naive Pattern Character Design",
-          "price": "$3.50",
-          "link": "https://www.redbubble.com/shop/ap/178733956"
+          "name": "Party Capybara Ceramic Mug",
+          "price": "$16.00",
+          "src": "https://ih1.redbubble.net/image.6085389138.5558/mgh-hu-15,x221,w,f8f8f8-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/mug/Party-Capybara-Birthday-Hat-Cute-Crayon-by-NightGrainCo/178805558.9Q0AD"
+        },
+        {
+          "id": 8,
+          "name": "Party Capybara Tote Bag",
+          "price": "$20.00",
+          "src": "https://ih1.redbubble.net/image.6085389138.5558/tb,13x13-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/tote-bag/Party-Capybara-Birthday-Hat-Cute-Crayon-by-NightGrainCo/178805558.P1QBH"
+        },
+        {
+          "id": 9,
+          "name": "Party Capybara Notebook",
+          "price": "$14.00",
+          "src": "https://ih1.redbubble.net/image.6085389138.5558/sn,x1000-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/notebook/Party-Capybara-Birthday-Hat-Cute-Crayon-by-NightGrainCo/178805558.RXH2R"
+        },
+        {
+          "id": 10,
+          "name": "Party Capybara Throw Pillow",
+          "price": "$24.00",
+          "src": "https://ih1.redbubble.net/image.6085389138.5558/tp,16x16-pad,600x600,f8f8f8.u1.jpg",
+          "link": "https://www.redbubble.com/i/throw-pillow/Party-Capybara-Birthday-Hat-Cute-Crayon-by-NightGrainCo/178805558.5X2YF"
         }
       ]
     }
