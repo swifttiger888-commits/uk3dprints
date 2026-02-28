@@ -11,13 +11,13 @@ const products = [
     {
         id: 2,
         title: "Cat Buddha Sit Deadpan",
-        img: "https://ih1.redbubble.net/image.6086534034.5465/st,small,507x507-pad,600x600,f8f8f8.jpg",
+        img: "https://ih1.redbubble.net/image.6086543238.5761/aps,504x498,small,transparent-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/shop/ap/178845761"
     },
     {
         id: 3,
         title: "T-Rex Stacked Animals",
-        img: "https://ih1.redbubble.net/image.6086543238.5761/aps,504x498,small,transparent-pad,600x600,f8f8f8.jpg",
+        img: "https://ih1.redbubble.net/image.6086534034.5465/st,small,507x507-pad,600x600,f8f8f8.jpg",
         link: "https://www.redbubble.com/shop/ap/178845465"
     },
     {
