@@ -79,13 +79,14 @@ export default function StickerGrid() {
                                                 className="w-full h-full object-contain filter group-hover:scale-110 transition-transform duration-500"
                                             />
                                         </div>
-                                        <h3 className="text-lg font-bold text-brand-text mb-2 line-clamp-1">
+                                        <h3 className="text-lg font-bold text-brand-text mb-6 line-clamp-1">
                                             {sticker.name}
                                         </h3>
-                                        <p className="text-brand-accent font-semibold mb-4">{sticker.price}</p>
 
                                         <a
                                             href={sticker.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className={`mt-auto w-full py-3 px-4 bg-white font-semibold flex items-center justify-center gap-2 transition-colors ${isClassic
                                                 ? 'text-[#333333] group-hover:bg-[#333333] group-hover:text-white'
                                                 : 'text-brand-accent group-hover:bg-brand-accent group-hover:text-white'
@@ -94,7 +95,6 @@ export default function StickerGrid() {
                                                 borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
                                                 border: `2px solid ${isClassic ? '#333333' : '#B07E2F'}`
                                             }}
-                                            onClick={(e) => e.preventDefault()}
                                         >
                                             View on Redbubble
                                         </a>

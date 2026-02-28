@@ -82,6 +82,8 @@ export default function ProductGallery() {
 
                                 <a
                                     href={product.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold uppercase tracking-widest text-white bg-brand-accent hover:bg-brand-accentHover transition-colors mt-auto"
                                     style={{
                                         borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
