@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import data from '../data/collections.json';
-import LocalPrice from './LocalPrice';
 
 export default function ProductGallery() {
     // Only display the collections that are art categories (not seasonal-favorites or nightgrain-classics)
@@ -65,8 +64,8 @@ export default function ProductGallery() {
                                         <h4 className="text-base font-bold text-brand-text mb-1 leading-tight h-10 flex items-center justify-center">
                                             {product.name}
                                         </h4>
-                                        <p className="font-extrabold text-[#B07E2F] mb-4 text-xs tracking-wider">
-                                            <LocalPrice basePriceString={product.price} />
+                                        <p className="font-bold text-[#B07E2F] mb-4 text-[10px] tracking-wider uppercase opacity-80 decoration-brand-accent underline-offset-2 hover:underline decoration-wavy">
+                                            Check Current Price / Sales
                                         </p>
 
                                         <a
