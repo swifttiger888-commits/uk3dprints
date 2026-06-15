@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "id": "steering-wheel",
+      "name": "Mini Steering Wheel",
+      "subtitle": "For Xbox & Scuf Thumbsticks",
+      "price": "12.00",
+      "currency": "GBP",
+      "description": "Snap-on mini steering wheel for Xbox Series X/S, Xbox One, and Scuf controller thumbsticks. Precision friction fit, 3D printed in black PLA. 45mm diameter — compact enough to not block adjacent buttons.",
+      "specs": {
+        "Diameter": "45mm",
+        "Material": "Elegoo Black PLA",
+        "Weight": "~5g",
+        "Compatibility": "Xbox Series X|S, Xbox One, Scuf",
+        "Print Time": "~30 min"
+      },
+      "images": ["steering-wheel-1.png"],
+      "stripePriceId": "price_PLACEHOLDER",
+      "featured": true
+    },
+    {
+      "id": "webcam-cover",
+      "name": "Webcam Privacy Covers",
+      "subtitle": "5-Pack",
+      "price": "8.00",
+      "currency": "GBP",
+      "description": "Simple sliding webcam privacy covers. Snaps onto most laptop screens and monitor bezels. Sold in 5-packs — one for every device. 3D printed in black PLA.",
+      "specs": {
+        "Cover Area": "12 × 8mm",
+        "Material": "Elegoo Black PLA",
+        "Weight": "~2g each",
+        "Compatibility": "Universal — most laptops and webcams",
+        "Pack Size": "5 covers"
+      },
+      "images": ["webcam-cover-1.png"],
+      "stripePriceId": "price_PLACEHOLDER"
+    },
+    {
+      "id": "cable-clips",
+      "name": "Cable Clips",
+      "subtitle": "50-Pack, Mixed Diameters",
+      "price": "15.00",
+      "currency": "GBP",
+      "description": "Parametric snap-on cable clips with 3M adhesive backing. Mixed pack covers USB cables, power leads, ethernet, and sim rig profile wiring. Print 50 at a time — variety pack covers every cable on your desk.",
+      "specs": {
+        "Diameters": "3.5mm to 10mm",
+        "Material": "Elegoo Black PLA",
+        "Weight": "~1g each",
+        "Pack Size": "50 clips, mixed sizes",
+        "Adhesive": "3M pads included"
+      },
+      "images": ["cable-clips-1.png"],
+      "stripePriceId": "price_PLACEHOLDER",
+      "featured": true
+    },
+    {
+      "id": "nameplate",
+      "name": "Custom Nameplate",
+      "subtitle": "Gamer Tag / Desk Badge",
+      "price": "15.00",
+      "currency": "GBP",
+      "description": "Personalised 3D printed nameplate. Choose your text and font — we print it in black PLA with raised lettering that catches the light. Currently black only — 2-tone coming when more filament colours arrive.",
+      "specs": {
+        "Dimensions": "80 × 25mm (customisable)",
+        "Material": "Elegoo Black PLA",
+        "Weight": "~8g",
+        "Customisation": "Text + font choice",
+        "Note": "Black only — raised text effect"
+      },
+      "images": ["nameplate-1.png"],
+      "stripePriceId": "price_PLACEHOLDER",
+      "customOrder": true
+    },
+    {
+      "id": "headphone-hook",
+      "name": "Headphone Hook",
+      "subtitle": "Under-Desk, Clamp or Screw Mount",
+      "price": "14.00",
+      "currency": "GBP",
+      "description": "Keep your headphones off the desk. Two variants: clamp-on (no drilling, M6 bolt included) for desks up to 40mm thick, or screw-mount for a permanent clean install. 3D printed in black PLA, 30% infill for strength.",
+      "specs": {
+        "Depth": "40mm",
+        "Material": "Elegoo Black PLA",
+        "Weight": "~25g",
+        "Max Desk": "40mm (clamp variant)",
+        "Variants": "Clamp or screw-mount"
+      },
+      "images": ["headphone-hook-1.png"],
+      "stripePriceId": "price_PLACEHOLDER"
+    }
+  ]
+}

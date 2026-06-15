@@ -1,22 +1,18 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ProductGallery from './components/ProductGallery';
-import StickerGrid from './components/StickerGrid';
+import ProductGrid from './components/ProductGrid';
 import Footer from './components/Footer';
-import CookieBanner from './components/CookieBanner';
 
 function App() {
   return (
-    <div className="min-h-screen bg-brand-bg font-sans">
+    <div className="min-h-screen bg-brand-bg font-sans text-brand-text">
       <Navbar />
       <main>
         <Hero />
-        <ProductGallery />
-        <StickerGrid />
+        <ProductGrid />
       </main>
       <Footer />
-      <CookieBanner />
     </div>
   );
 }

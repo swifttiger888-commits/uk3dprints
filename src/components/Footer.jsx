@@ -1,23 +1,52 @@
 import React from 'react';
 
 export default function Footer() {
-    return (
-        <footer className="bg-brand-text text-white py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-                <img src="/images/logo.png" alt="Calico & Cream Logo" className="h-20 w-20 mb-4 object-contain" />
-                <div className="text-2xl font-extrabold tracking-tight mb-2">
-                    Calico<span className="text-brand-accent"> & Cream</span>
-                </div>
-                <p className="text-gray-400 max-w-md mx-auto mb-4">
-                    Explore the Ugly-Cute Menagerie. Premium naive crayon art designs and cozy aesthetic illustrations on 50+ products. Designed for Redbubble with 💚.
-                </p>
-                <div className="sr-only">
-                    Keywords: Naive art merchandise, Ugly-cute home decor, Crayon style t-shirts, Scottish Fold inspired gifts, Hand-drawn animal mugs, cute aesthetic artwork, weird core, quirky stationery, novelty gifts.
-                </div>
-                <div className="text-sm text-gray-500 mb-8">
-                    &copy; {new Date().getFullYear()} Calico & Cream. All rights reserved.
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <footer id="about" className="bg-brand-surface border-t border-brand-border py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Brand */}
+          <div>
+            <span className="font-bold text-xl tracking-tight">
+              <span className="text-brand-text">UK</span><span className="text-brand-accent">3D</span>
+              <span className="text-brand-textMuted text-sm ml-1">Prints</span>
+            </span>
+            <p className="text-brand-textMuted text-sm mt-3 leading-relaxed">
+              3D printed gaming accessories, sim racing gear, and desk organisation.
+              Designed, printed, and shipped from the UK.
+            </p>
+          </div>
+
+          {/* How it works */}
+          <div>
+            <h4 className="text-sm font-semibold text-brand-text uppercase tracking-wider mb-4">How It Works</h4>
+            <ol className="text-brand-textMuted text-sm space-y-2">
+              <li>1. You order — we print it fresh</li>
+              <li>2. Ships within 2-3 working days</li>
+              <li>3. Free UK delivery over £20</li>
+              <li>4. Printed on Creality SPARKX i7</li>
+            </ol>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-sm font-semibold text-brand-text uppercase tracking-wider mb-4">Contact</h4>
+            <ul className="text-brand-textMuted text-sm space-y-2">
+              <li>
+                <a href="mailto:hello@uk3dprints.com" className="hover:text-brand-accent transition-colors">
+                  hello@uk3dprints.com
+                </a>
+              </li>
+              <li>UK-based · Ships to UK only</li>
+              <li>14-day returns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-brand-border mt-12 pt-6 text-center text-brand-textMuted text-xs">
+          &copy; {new Date().getFullYear()} UK3D Prints. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
 }
