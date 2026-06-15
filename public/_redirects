@@ -1,0 +1,6 @@
+# Serve prerendered product pages (no trailing slash — common with crawlers)
+/product/steering-wheel  /product/steering-wheel/index.html  200
+/product/webcam-cover  /product/webcam-cover/index.html  200
+/product/cable-clips  /product/cable-clips/index.html  200
+/product/nameplate  /product/nameplate/index.html  200
+/product/headphone-hook  /product/headphone-hook/index.html  200

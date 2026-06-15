@@ -1,0 +1,76 @@
+{
+  "global": [
+    {
+      "question": "What materials do you print with?",
+      "answer": "Our launch range is printed in Elegoo PLA — a durable, biodegradable thermoplastic perfect for desk accessories and moderate-use gaming gear. Materials and colours vary by product; check individual product pages for the latest details as our range expands."
+    },
+    {
+      "question": "How long does shipping take?",
+      "answer": "We're currently in pre-launch testing. Once we're live, every item will be printed to order. Shipping is planned to take 2–3 working days within the UK. Free UK shipping is planned on orders over £20 — standard shipping will be £1.55."
+    },
+    {
+      "question": "What is your return policy?",
+      "answer": "We plan to offer a 14-day return policy once we're live. If you're not happy with your item, contact us at hello@uk3dprints.com and we'll sort it out. Because items are printed to order, returns will be handled case-by-case."
+    },
+    {
+      "question": "Can I request a custom order?",
+      "answer": "Absolutely. The Custom Nameplate product is designed for full customisation, but we're happy to discuss other custom projects. Email hello@uk3dprints.com with your idea and we'll let you know if it's doable."
+    },
+    {
+      "question": "When will the store launch?",
+      "answer": "We're currently testing our printer and dialling in the first batch of products. Sign up for early access on any product page and we'll email you as soon as orders open. We're aiming to launch within the coming weeks."
+    }
+  ],
+  "perProduct": {
+    "steering-wheel": [
+      {
+        "question": "Which controllers does this fit?",
+        "answer": "The Mini Steering Wheel fits Xbox Series X|S, Xbox One, and Scuf controller thumbsticks. It snaps on with a precision friction fit — tight enough to stay put during play, but easy to remove when you want standard sticks back."
+      },
+      {
+        "question": "Does it block any buttons?",
+        "answer": "At 45mm diameter, the wheel is compact enough to not block adjacent buttons on standard Xbox controllers. The open-spoke design keeps ABXY buttons fully accessible."
+      }
+    ],
+    "webcam-cover": [
+      {
+        "question": "Will this fit my laptop?",
+        "answer": "The cover snaps onto most laptop screens and monitor bezels up to ~5mm thick. The adhesive-free sliding mechanism means no residue — just slide open when you need the camera, closed when you don't."
+      },
+      {
+        "question": "How many covers do I get?",
+        "answer": "5 covers per pack. Enough for your laptop, monitor, desktop webcam, and spares."
+      }
+    ],
+    "cable-clips": [
+      {
+        "question": "What cable diameters are included?",
+        "answer": "The 50-pack contains a mix of diameters from 3.5mm (thin USB/data cables) up to 10mm (thick power leads/ethernet). Each clip has 3M adhesive backing — just peel and stick."
+      },
+      {
+        "question": "Will these work on sim rig profiles?",
+        "answer": "Yes. The mixed diameters cover typical sim rig wiring (USB cables, power leads for wheel bases/shakers, pedal wires). The 3M backing adheres well to aluminium profile, but you can also use adhesive cable tie mounts for a more permanent install."
+      }
+    ],
+    "nameplate": [
+      {
+        "question": "What customisation options are available?",
+        "answer": "You choose the text and the font. We print it with raised lettering. Current dimensions are 80×25mm but can be adjusted for longer names. Email us after ordering with your text and font preference. Colour and material options are listed on the product page."
+      },
+      {
+        "question": "Is multi-colour printing available?",
+        "answer": "Our current setup produces single-colour prints with raised lettering that catches the light — giving a subtle two-tone effect visually. We're exploring multi-material options for the future. Check the product page for the latest available colours."
+      }
+    ],
+    "headphone-hook": [
+      {
+        "question": "Which mount variant should I choose?",
+        "answer": "Choose clamp-on if you can't drill your desk or want it temporary (includes M6 bolt, fits desks up to 40mm thick). Choose screw-mount if you want a permanent clean install — just needs two screws into your desk underside."
+      },
+      {
+        "question": "Is it strong enough for heavy headphones?",
+        "answer": "Yes — printed at 30% infill with 2 perimeters, the hook is surprisingly strong. It comfortably holds heavy gaming headsets (like Astro A50s or SteelSeries Arctis Pros). The clamp version holds firm thanks to the included M6 bolt."
+      }
+    ]
+  }
+}

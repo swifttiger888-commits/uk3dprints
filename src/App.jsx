@@ -1,53 +1,77 @@
 import React, { useState, useEffect } from 'react';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProductGrid from './components/ProductGrid';
 import ProductDetail from './components/ProductDetail';
 import Footer from './components/Footer';
+import { getOrganizationSchema } from './data/seo.js';
 
 function App() {
   const [view, setView] = useState('grid');
   const [productId, setProductId] = useState(null);
 
+  // ── Path-based routing ──────────────────────────────────────────
   useEffect(() => {
-    function handleHash() {
-      const hash = window.location.hash;
-      if (hash.startsWith('#product/')) {
-        setProductId(hash.replace('#product/', ''));
-        setView('detail');
-      } else {
-        setView('grid');
-        setProductId(null);
+    function resolvePath(pathname) {
+      if (pathname.startsWith('/product/')) {
+        const slug = pathname.replace('/product/', '');
+        return { view: 'detail', productId: slug };
       }
+      return { view: 'grid', productId: null };
     }
-    handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+
+    function handlePopState() {
+      const route = resolvePath(window.location.pathname);
+      setView(route.view);
+      setProductId(route.productId);
+    }
+
+    // Initial route
+    const initial = resolvePath(window.location.pathname);
+    setView(initial.view);
+    setProductId(initial.productId);
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const navigateToProduct = (id) => {
-    window.location.hash = `#product/${id}`;
+    window.history.pushState({}, '', `/product/${id}`);
+    setView('detail');
+    setProductId(id);
   };
 
   const goBack = () => {
-    window.location.hash = '';
+    window.history.pushState({}, '', '/');
+    setView('grid');
+    setProductId(null);
   };
 
   return (
-    <div className="min-h-screen bg-brand-bg font-sans text-brand-text">
-      <Navbar />
-      <main>
-        {view === 'detail' ? (
-          <ProductDetail productId={productId} onBack={goBack} />
-        ) : (
-          <>
-            <Hero />
-            <ProductGrid onProductClick={navigateToProduct} />
-          </>
-        )}
-      </main>
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <div className="min-h-screen bg-brand-bg font-sans text-brand-text">
+        {/* Global Organization schema on every page */}
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify(getOrganizationSchema())}
+          </script>
+        </Helmet>
+
+        <Navbar />
+        <main>
+          {view === 'detail' ? (
+            <ProductDetail productId={productId} onBack={goBack} />
+          ) : (
+            <>
+              <Hero />
+              <ProductGrid onProductClick={navigateToProduct} />
+            </>
+          )}
+        </main>
+        <Footer />
+      </div>
+    </HelmetProvider>
   );
 }
 

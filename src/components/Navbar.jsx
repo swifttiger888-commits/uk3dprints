@@ -21,7 +21,7 @@ export default function Navbar() {
               href="#products"
               className="px-4 py-2 text-sm font-semibold rounded text-black bg-brand-accent hover:bg-brand-accentHover transition-colors"
             >
-              Shop Now
+              Get Early Access
             </a>
           </div>
         </div>

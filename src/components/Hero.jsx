@@ -5,6 +5,16 @@ export default function Hero() {
   return (
     <section className="pt-32 pb-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-block mb-6"
+        >
+          <span className="text-xs font-semibold uppercase tracking-widest text-brand-accent bg-brand-accent/10 px-4 py-1.5 rounded-full">
+            Early Access — Invite Only
+          </span>
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,10 +29,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-brand-textMuted text-lg max-w-2xl mx-auto mb-8"
+          className="text-brand-textMuted text-lg max-w-2xl mx-auto mb-3"
         >
           Designed and printed in the UK. Black PLA. No middleman.
-          Every item is made to order on a Creality SPARKX i7.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-brand-textMuted text-base max-w-xl mx-auto mb-8"
+        >
+          We're getting our printer dialled in and testing the first batch.
+          Request an invite to be among the first to order when we launch.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,10 +55,10 @@ export default function Hero() {
             Browse Products
           </a>
           <a
-            href="#about"
+            href="mailto:hello@uk3dprints.com?subject=Early%20Access%20Interest"
             className="px-8 py-3 text-base font-semibold rounded border border-brand-border text-brand-text hover:border-brand-accent transition-colors"
           >
-            How It Works
+            Request Invite
           </a>
         </motion.div>
       </div>
