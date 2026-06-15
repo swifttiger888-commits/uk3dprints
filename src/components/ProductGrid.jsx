@@ -30,7 +30,7 @@ export default function ProductGrid({ onProductClick }) {
                 {/* Product image */}
                 <div className="aspect-video bg-black/60 flex items-center justify-center p-4 relative overflow-hidden">
                   <img
-                    src={getProductImageUrl(product)}
+                    src={getProductImageUrl(product, "card")}
                     alt={product.name}
                     className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                   />

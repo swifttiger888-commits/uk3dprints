@@ -2,8 +2,9 @@
 const CF_IMAGES_ACCOUNT_HASH = import.meta.env.VITE_CF_IMAGES_HASH || '0mC63s07iTD25-GQ6n3_8A';
 const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://uk3dprints.com';
 
-// Default variant to use (must exist in Cloudflare Images dashboard)
-const VARIANT = 'public';
+// Set to true ONLY after enabling Flexible Variants in Cloudflare Images dashboard
+// Settings → Hosted Images → Delivery → Flexible variants
+const USE_FLEXIBLE_VARIANTS = false;
 
 // Map product IDs to Cloudflare Image UUIDs
 const IMAGE_IDS = {
@@ -14,43 +15,49 @@ const IMAGE_IDS = {
   'headphone-hook': 'c84f4675-deeb-4ef2-5fae-111030052100',
 };
 
+// Mode A — named variant (always works, 'public' is guaranteed)
+const NAMED_VARIANT = 'public';
+
+// Mode B — flexible transformations (only if enabled in dashboard)
+const FLEXIBLE_TRANSFORMS = {
+  card: 'w=400,h=300,fit=cover',
+  detail: 'w=600,h=600,fit=cover',
+  og: 'w=1200,h=630,fit=cover',
+};
+
 /**
  * Get the image URL for a product or page.
- * Uses Cloudflare Images CDN with the 'public' variant.
- * Falls back to local SVGs in /public/images/ when needed.
  *
- * @param {string} productId - The product ID (e.g. 'steering-wheel')
- * @param {string} variant - Image variant name (default: 'public')
- * @param {boolean} absolute - Return absolute URL (for OG/schema)
+ * Mode A (default): uses named variant 'public' for all images
+ * Mode B: uses flexible transformations when USE_FLEXIBLE_VARIANTS = true
+ *
+ * Falls back to local SVGs when Cloudflare Images is unavailable.
+ *
+ * @param {string} productId - e.g. 'steering-wheel'
+ * @param {'card'|'detail'|'og'} context - image usage context
+ * @param {boolean} absolute - return absolute URL (for OG/schema)
  */
-export function getImageUrl(productId, variant = VARIANT, absolute = false) {
+export function getImageUrl(productId, context = 'card', absolute = false) {
   const imageId = IMAGE_IDS[productId];
+  const transform = FLEXIBLE_TRANSFORMS[context];
 
   if (imageId && CF_IMAGES_ACCOUNT_HASH) {
-    const url = `https://imagedelivery.net/${CF_IMAGES_ACCOUNT_HASH}/${imageId}/${variant}`;
-    if (absolute && url.startsWith('/')) {
-      return `${SITE_URL}${url}`;
-    }
-    return url;
+    const suffix = USE_FLEXIBLE_VARIANTS && transform ? transform : NAMED_VARIANT;
+    const url = `https://imagedelivery.net/${CF_IMAGES_ACCOUNT_HASH}/${imageId}/${suffix}`;
+    return absolute ? url : url;
   }
 
-  // Fallback to local SVG in public/images/
-  let fallback;
-  if (productId === 'og-preview') {
-    fallback = '/images/og-preview.svg';
-  } else {
-    fallback = `/images/${productId}-1.svg`;
-  }
+  // Fallback to local SVG
+  const fallback = productId === 'og-preview'
+    ? '/images/og-preview.svg'
+    : `/images/${productId}-1.svg`;
 
-  if (absolute) {
-    return `${SITE_URL}${fallback}`;
-  }
-  return fallback;
+  return absolute ? `${SITE_URL}${fallback}` : fallback;
 }
 
 /**
  * Convenience wrapper that takes a product object.
  */
-export function getProductImageUrl(product, variant = VARIANT, absolute = false) {
-  return getImageUrl(product.id, variant, absolute);
+export function getProductImageUrl(product, context = 'card', absolute = false) {
+  return getImageUrl(product.id, context, absolute);
 }

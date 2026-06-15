@@ -28,7 +28,7 @@ export default function ProductDetail({ productId, onBack }) {
         "@type": "Product",
         "name": product.name,
         "description": product.description,
-        "image": getProductImageUrl(product, "public", true),
+        "image": getProductImageUrl(product, "og", true),
         "offers": {
           "@type": "Offer",
           "price": product.price,
@@ -63,7 +63,7 @@ export default function ProductDetail({ productId, onBack }) {
               className="aspect-square bg-brand-surface border border-brand-border rounded-lg flex items-center justify-center overflow-hidden"
             >
               <img
-                src={getProductImageUrl(product)}
+                src={getProductImageUrl(product, "detail")}
                 alt={product.name}
                 className="w-full h-full object-contain p-8"
               />
