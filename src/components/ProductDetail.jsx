@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import { products } from '../data/products.json';
+import { getProductImageUrl } from '../config.js';
 
 export default function ProductDetail({ productId, onBack }) {
   const product = products.find(p => p.id === productId);
@@ -19,8 +20,6 @@ export default function ProductDetail({ productId, onBack }) {
     );
   }
 
-  const Icon = ICONS[product.id];
-
   return (
     <>
       {/* Schema markup */}
@@ -29,7 +28,7 @@ export default function ProductDetail({ productId, onBack }) {
         "@type": "Product",
         "name": product.name,
         "description": product.description,
-        "image": `https://uk3dprints.com/images/${product.images[0]}`,
+        "image": getProductImageUrl(product, "og", true),
         "offers": {
           "@type": "Offer",
           "price": product.price,
@@ -64,7 +63,7 @@ export default function ProductDetail({ productId, onBack }) {
               className="aspect-square bg-brand-surface border border-brand-border rounded-lg flex items-center justify-center overflow-hidden"
             >
               <img
-                src={`/images/${product.images[0]}`}
+                src={getProductImageUrl(product, "detail")}
                 alt={product.name}
                 className="w-full h-full object-contain p-8"
               />

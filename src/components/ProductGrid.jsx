@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { products } from '../data/products.json';
+import { getProductImageUrl } from '../config.js';
 
 export default function ProductGrid({ onProductClick }) {
   return (
@@ -16,7 +17,6 @@ export default function ProductGrid({ onProductClick }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, i) => {
-            const Icon = ICONS[product.id];
             return (
               <motion.div
                 key={product.id}
@@ -30,7 +30,8 @@ export default function ProductGrid({ onProductClick }) {
                 {/* Product image */}
                 <div className="aspect-video bg-black/60 flex items-center justify-center p-4 relative overflow-hidden">
                   <img
-                    src={`/images/${product.images[0]}`}
+                    src={getProductImageUrl(product, "card")}
+                    srcSet=""
                     alt={product.name}
                     className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                   />
