@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Wrench, Shield, Cable, Type, Headphones } from 'lucide-react';
-import products from '../data/products.json';
+import { products } from '../data/products.json';
 
 const ICONS = {
   'steering-wheel': Wrench,
