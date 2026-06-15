@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <g opacity="0.03">
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="78" x2="1200" y2="78" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="157" x2="1200" y2="157" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="236" x2="1200" y2="236" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="393" x2="1200" y2="393" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="472" x2="1200" y2="472" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="551" x2="1200" y2="551" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="0" y1="630" x2="1200" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="150" y1="0" x2="150" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="750" y1="0" x2="750" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+    <line x1="1050" y1="0" x2="1050" y2="630" stroke="#00FF88" stroke-width="0.5"/>
+  </g>
+  <text x="100" y="280" font-size="96" font-weight="900" font-family="sans-serif" fill="#E5E5E5">UK</text>
+  <text x="260" y="280" font-size="96" font-weight="900" font-family="sans-serif" fill="#00FF88">3D</text>
+  <text x="440" y="280" font-size="48" font-weight="400" font-family="sans-serif" fill="#888" opacity="0.8">Prints</text>
+  <text x="100" y="350" font-size="28" font-family="sans-serif" fill="#888">3D Printed Gaming &amp; Desk Accessories</text>
+  <circle cx="1050" cy="200" r="180" stroke="#00FF88" stroke-width="2" opacity="0.15"/>
+  <circle cx="1050" cy="200" r="120" stroke="#00FF88" stroke-width="1.5" opacity="0.1"/>
+  <circle cx="1050" cy="200" r="60" stroke="#00FF88" stroke-width="1" opacity="0.2"/>
+  <rect x="100" y="420" width="400" height="3" rx="1.5" fill="#00FF88" opacity="0.4"/>
+  <text x="100" y="480" font-size="18" font-family="sans-serif" fill="#666">Designed, printed, and shipped from the UK</text>
+  <text x="100" y="510" font-size="18" font-family="sans-serif" fill="#666">Printed on Creality SPARKX i7 · Black PLA</text>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00FF88" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#00FF88" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

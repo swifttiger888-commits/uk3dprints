@@ -1,15 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Wrench, Shield, Cable, Type, Headphones } from 'lucide-react';
 import { products } from '../data/products.json';
-
-const ICONS = {
-  'steering-wheel': Wrench,
-  'webcam-cover': Shield,
-  'cable-clips': Cable,
-  'nameplate': Type,
-  'headphone-hook': Headphones,
-};
 
 export default function ProductGrid({ onProductClick }) {
   return (
@@ -36,12 +27,13 @@ export default function ProductGrid({ onProductClick }) {
                 onClick={() => onProductClick && onProductClick(product.id)}
                 className="bg-brand-surface border border-brand-border rounded-lg overflow-hidden group cursor-pointer"
               >
-                {/* Image placeholder */}
+                {/* Product image */}
                 <div className="aspect-video bg-black/60 flex items-center justify-center p-4 relative overflow-hidden">
-                  <Icon className="w-16 h-16 text-brand-accent/30 group-hover:text-brand-accent/60 transition-colors" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-brand-bg/60">
-                    <span className="text-brand-accent text-sm font-semibold">Photo coming soon</span>
-                  </div>
+                  <img
+                    src={`/images/${product.images[0]}`}
+                    alt={product.name}
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
 
                 <div className="p-5">

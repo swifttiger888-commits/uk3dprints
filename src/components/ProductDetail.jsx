@@ -1,15 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Wrench, Shield, Cable, Type, Headphones } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { products } from '../data/products.json';
-
-const ICONS = {
-  'steering-wheel': Wrench,
-  'webcam-cover': Shield,
-  'cable-clips': Cable,
-  'nameplate': Type,
-  'headphone-hook': Headphones,
-};
 
 export default function ProductDetail({ productId, onBack }) {
   const product = products.find(p => p.id === productId);
@@ -69,9 +61,13 @@ export default function ProductDetail({ productId, onBack }) {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="aspect-square bg-brand-surface border border-brand-border rounded-lg flex items-center justify-center"
+              className="aspect-square bg-brand-surface border border-brand-border rounded-lg flex items-center justify-center overflow-hidden"
             >
-              <Icon className="w-24 h-24 text-brand-accent/30" />
+              <img
+                src={`/images/${product.images[0]}`}
+                alt={product.name}
+                className="w-full h-full object-contain p-8"
+              />
             </motion.div>
 
             {/* Details */}
