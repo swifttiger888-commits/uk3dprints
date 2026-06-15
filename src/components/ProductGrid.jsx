@@ -11,7 +11,7 @@ const ICONS = {
   'headphone-hook': Headphones,
 };
 
-export default function ProductGrid() {
+export default function ProductGrid({ onProductClick }) {
   return (
     <section id="products" className="py-20 bg-brand-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +33,8 @@ export default function ProductGrid() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 whileHover={{ y: -4 }}
-                className="bg-brand-surface border border-brand-border rounded-lg overflow-hidden group"
+                onClick={() => onProductClick && onProductClick(product.id)}
+                className="bg-brand-surface border border-brand-border rounded-lg overflow-hidden group cursor-pointer"
               >
                 {/* Image placeholder */}
                 <div className="aspect-video bg-black/60 flex items-center justify-center p-4 relative overflow-hidden">
@@ -72,20 +73,9 @@ export default function ProductGrid() {
                     <span className="text-xl font-bold text-brand-accent">
                       £{product.price}
                     </span>
-                    {product.customOrder ? (
-                      <a
-                        href="mailto:hello@uk3dprints.com?subject=Custom Nameplate Order"
-                        className="px-4 py-2 text-sm font-semibold rounded border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-black transition-colors"
-                      >
-                        Order via Email
-                      </a>
-                    ) : (
-                      <button
-                        className="px-4 py-2 text-sm font-semibold rounded text-black bg-brand-accent hover:bg-brand-accentHover transition-colors"
-                      >
-                        Buy Now — £{product.price}
-                      </button>
-                    )}
+                    <span className="px-4 py-2 text-sm font-semibold rounded text-brand-accent border border-brand-accent group-hover:bg-brand-accent group-hover:text-black transition-colors">
+                      View Details →
+                    </span>
                   </div>
                 </div>
               </motion.div>
