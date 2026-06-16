@@ -29,7 +29,7 @@ export async function onRequest(context) {
   }
 
   try {
-    const stripe = Stripe(secretKey, {
+    const stripe = new Stripe(secretKey, {
       apiVersion: '2025-02-24.acacia',
     });
 

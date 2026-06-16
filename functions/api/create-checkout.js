@@ -65,7 +65,7 @@ export async function onRequest(context) {
       );
     }
 
-    const stripe = Stripe(secretKey, {
+    const stripe = new Stripe(secretKey, {
       apiVersion: '2025-02-24.acacia',
     });
 
