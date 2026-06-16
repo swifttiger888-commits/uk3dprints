@@ -31,16 +31,32 @@ export async function onRequest(context) {
       );
     }
 
-    // Log to Cloudflare logs for now
+    // Try VPS collector — use fetch with explicit options
+    const collectorUrl = 'http://192.248.163.88:9877';
+    let collectorOk = false;
+    let collectorError = null;
+    try {
+      const collectorRes = await fetch(collectorUrl, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      collectorOk = collectorRes.ok;
+      collectorError = collectorOk ? null : `status ${collectorRes.status}`;
+    } catch (e) {
+      collectorError = e.message;
+    }
+
+    // Fallback: log to CF logs regardless
     console.log('[interest]', JSON.stringify({
       product: data.product,
       name: data.name,
       email: data.email,
       message: data.message || '',
-      timestamp: new Date().toISOString(),
+      collector: collectorOk ? 'ok' : collectorError,
     }));
 
-    return new Response(JSON.stringify({ ok: true }), {
+    return new Response(JSON.stringify({ ok: true, stored: collectorOk, error: collectorError }), {
       status: 200,
       headers: { 'content-type': 'application/json' },
     });
