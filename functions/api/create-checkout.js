@@ -48,13 +48,13 @@ export async function onRequest(context) {
     }
 
     // Load product data to get the Stripe price ID
-    // Since we can't import JSON dynamically easily, use the inline map
+    // Price IDs are public identifiers (like product IDs), not secrets
     const PRICE_IDS = {
-      'steering-wheel': env.STRIPE_PRICE_STEERING_WHEEL,
-      'webcam-cover': env.STRIPE_PRICE_WEBCAM_COVER,
-      'cable-clips': env.STRIPE_PRICE_CABLE_CLIPS,
-      'nameplate': env.STRIPE_PRICE_NAMEPLATE,
-      'headphone-hook': env.STRIPE_PRICE_HEADPHONE_HOOK,
+      'steering-wheel': 'price_1Tj4lYGn3Fzo0mzdQ2cS4zfm',
+      'webcam-cover': 'price_1Tj4lYGn3Fzo0mzdVZwuiVPH',
+      'cable-clips': 'price_1Tj4lZGn3Fzo0mzdzNevcnvI',
+      'nameplate': 'price_1Tj4laGn3Fzo0mzdlmKHpxg7',
+      'headphone-hook': 'price_1Tj4laGn3Fzo0mzdMdfKancc',
     };
 
     const priceId = PRICE_IDS[productId];
