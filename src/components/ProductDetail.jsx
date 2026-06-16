@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ChevronDown, ChevronUp, Mail } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ChevronUp, CreditCard, Loader, Mail } from 'lucide-react';
 import { products } from '../data/products.json';
 import { getProductImageUrl } from '../config.js';
 import SeoHead from './SeoHead';
@@ -15,6 +15,8 @@ export default function ProductDetail({ productId, onBack }) {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
+  const [checkoutError, setCheckoutError] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -77,6 +79,24 @@ export default function ProductDetail({ productId, onBack }) {
       setSubmitError(err.message || 'Something went wrong. Please try emailing us directly.');
     } finally {
       setSubmitting(false);
+    }
+  };
+
+  const handleBuyNow = async () => {
+    setCheckoutLoading(true);
+    setCheckoutError(null);
+    try {
+      const res = await fetch('/api/create-checkout', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ productId: product.id }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Checkout failed');
+      window.location.href = data.url;
+    } catch (err) {
+      setCheckoutError(err.message);
+      setCheckoutLoading(false);
     }
   };
 
@@ -163,6 +183,23 @@ export default function ProductDetail({ productId, onBack }) {
               <p className="text-brand-textMuted leading-relaxed mb-8">
                 {product.description}
               </p>
+
+              {/* Buy Now — Stripe Checkout */}
+              <button
+                onClick={handleBuyNow}
+                disabled={checkoutLoading}
+                className="w-full flex items-center justify-center gap-2 py-4 rounded-lg text-black font-bold bg-green-500 hover:bg-green-400 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-lg mb-4"
+              >
+                {checkoutLoading ? (
+                  <Loader className="w-5 h-5 animate-spin" />
+                ) : (
+                  <CreditCard className="w-5 h-5" />
+                )}
+                {checkoutLoading ? 'Redirecting to payment...' : `Buy now — £${product.price}`}
+              </button>
+              {checkoutError && (
+                <p className="text-red-400 text-xs text-center mb-4">{checkoutError}</p>
+              )}
 
               {/* Pre-launch disclaimer */}
               <div className="bg-brand-surface border border-brand-border rounded-lg p-4 mb-8">

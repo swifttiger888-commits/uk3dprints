@@ -76,7 +76,7 @@ export default function ProductGrid({ onProductClick }) {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-brand-textMuted">Pre-launch</span>
+                    <span className="text-sm font-bold text-brand-text">£{product.price}</span>
                     <span className="px-4 py-2 text-sm font-semibold rounded text-brand-accent border border-brand-accent group-hover:bg-brand-accent group-hover:text-black transition-colors">
                       View Details →
                     </span>
