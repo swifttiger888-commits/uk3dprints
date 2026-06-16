@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     function resolvePath(pathname) {
       if (pathname.startsWith('/product/')) {
-        const slug = pathname.replace('/product/', '');
+        const slug = pathname.replace('/product/', '').replace(/\/+$/, '');
         return { view: 'detail', productId: slug };
       }
       return { view: 'grid', productId: null };

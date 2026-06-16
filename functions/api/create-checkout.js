@@ -73,8 +73,8 @@ export async function onRequest(context) {
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: `${origin}/product/${productId}/?payment=success`,
-      cancel_url: `${origin}/product/${productId}/`,
+      success_url: `${origin}/product/${productId}?payment=success`,
+      cancel_url: `${origin}/product/${productId}`,
       shipping_address_collection: { allowed_countries: ['GB'] },
       metadata: { productId },
     });
