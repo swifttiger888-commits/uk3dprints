@@ -1,3 +1,12 @@
+/**
+ * UK3D Prints — Interest Form API
+ *
+ * Accepts POST from the early-access form and stores submissions.
+ * Uses Cloudflare Tunnel to reach the VPS collector (HTTPS required
+ * from Cloudflare edge — plain HTTP to raw IPs is blocked with 403).
+ */
+const COLLECTOR_URL = 'https://powers-exceptions-pierce-introduce.trycloudflare.com';
+
 export async function onRequest(context) {
   const { request } = context;
 
@@ -31,12 +40,11 @@ export async function onRequest(context) {
       );
     }
 
-    // Try VPS collector — use fetch with explicit options
-    const collectorUrl = 'http://192.248.163.88:9877';
+    // Forward to VPS collector via Cloudflare Tunnel
     let collectorOk = false;
     let collectorError = null;
     try {
-      const collectorRes = await fetch(collectorUrl, {
+      const collectorRes = await fetch(COLLECTOR_URL, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(data),
@@ -47,16 +55,17 @@ export async function onRequest(context) {
       collectorError = e.message;
     }
 
-    // Fallback: log to CF logs regardless
+    // Log to Cloudflare logs regardless (backup)
     console.log('[interest]', JSON.stringify({
       product: data.product,
       name: data.name,
       email: data.email,
       message: data.message || '',
-      collector: collectorOk ? 'ok' : collectorError,
+      stored: collectorOk,
+      error: collectorError,
     }));
 
-    return new Response(JSON.stringify({ ok: true, stored: collectorOk, error: collectorError }), {
+    return new Response(JSON.stringify({ ok: true, stored: collectorOk }), {
       status: 200,
       headers: { 'content-type': 'application/json' },
     });
