@@ -17,6 +17,17 @@ export default function ProductDetail({ productId, onBack }) {
   const [submitError, setSubmitError] = useState(null);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
   const [checkoutError, setCheckoutError] = useState(null);
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
+
+  useEffect(() => {
+    // Check for successful payment redirect from Stripe
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('payment') === 'success') {
+      setPaymentSuccess(true);
+      // Clean URL — remove query param without full reload
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -133,6 +144,20 @@ export default function ProductDetail({ productId, onBack }) {
             <ArrowLeft className="w-4 h-4" />
             Back to products
           </button>
+
+          {/* Payment success banner */}
+          {paymentSuccess && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-8 text-center"
+            >
+              <p className="text-green-400 font-semibold">Payment successful!</p>
+              <p className="text-sm text-green-400/80 mt-1">
+                Thanks for your order. We'll be in touch once your item is ready to ship.
+              </p>
+            </motion.div>
+          )}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Image */}
