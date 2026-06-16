@@ -1,8 +1,3 @@
-/**
- * UK3D Prints — Interest Form API
- *
- * Accepts POST from the early-access form and forwards to the VPS collector.
- */
 export async function onRequest(context) {
   const { request } = context;
 
@@ -36,25 +31,16 @@ export async function onRequest(context) {
       );
     }
 
-    // Forward to VPS collector
-    const collectorUrl = 'http://192.248.163.88:9877';
-    let collectorOk = false;
-    try {
-      const collectorRes = await fetch(collectorUrl, {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      collectorOk = collectorRes.ok;
-      if (!collectorOk) {
-        const text = await collectorRes.text();
-        console.error('[interest] collector returned', collectorRes.status, text);
-      }
-    } catch (e) {
-      console.error('[interest] collector unreachable:', e.message);
-    }
+    // Log to Cloudflare logs for now
+    console.log('[interest]', JSON.stringify({
+      product: data.product,
+      name: data.name,
+      email: data.email,
+      message: data.message || '',
+      timestamp: new Date().toISOString(),
+    }));
 
-    return new Response(JSON.stringify({ ok: true, stored: collectorOk }), {
+    return new Response(JSON.stringify({ ok: true }), {
       status: 200,
       headers: { 'content-type': 'application/json' },
     });
