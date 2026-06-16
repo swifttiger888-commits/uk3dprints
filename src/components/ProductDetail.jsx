@@ -13,6 +13,8 @@ export default function ProductDetail({ productId, onBack }) {
   const [showForm, setShowForm] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,6 +22,8 @@ export default function ProductDetail({ productId, onBack }) {
     setShowForm(false);
     setFormSubmitted(false);
     setFormData({ name: '', email: '', message: '' });
+    setSubmitting(false);
+    setSubmitError(null);
   }, [productId]);
 
   if (!product) {
@@ -51,16 +55,29 @@ export default function ProductDetail({ productId, onBack }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('[Early Access Interest]', {
-      product: product.name,
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-      timestamp: new Date().toISOString(),
-    });
-    setFormSubmitted(true);
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch('/api/interest', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          product: product.name,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'Submission failed');
+      setFormSubmitted(true);
+    } catch (err) {
+      setSubmitError(err.message || 'Something went wrong. Please try emailing us directly.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -227,11 +244,15 @@ export default function ProductDetail({ productId, onBack }) {
                       placeholder="Any questions or specific requirements?"
                     />
                   </div>
+                  {submitError && (
+                    <p className="text-red-400 text-xs text-center">{submitError}</p>
+                  )}
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-lg text-black font-bold bg-brand-accent hover:bg-brand-accentHover transition-colors text-sm"
+                    disabled={submitting}
+                    className="w-full py-3 rounded-lg text-black font-bold bg-brand-accent hover:bg-brand-accentHover disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm"
                   >
-                    Send Interest
+                    {submitting ? 'Sending...' : 'Send Interest'}
                   </button>
                   <button
                     type="button"
