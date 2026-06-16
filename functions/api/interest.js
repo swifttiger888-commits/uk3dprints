@@ -5,7 +5,7 @@
  * Uses Cloudflare Tunnel to reach the VPS collector (HTTPS required
  * from Cloudflare edge — plain HTTP to raw IPs is blocked with 403).
  */
-const COLLECTOR_URL = 'https://powers-exceptions-pierce-introduce.trycloudflare.com';
+const COLLECTOR_URL = 'https://collector.uk3dprints.com';
 
 export async function onRequest(context) {
   const { request } = context;

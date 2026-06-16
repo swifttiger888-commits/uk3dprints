@@ -17,5 +17,5 @@ for i in $(seq 1 10); do
   sleep 1
 done
 
-# Start Cloudflare Tunnel
-exec cloudflared tunnel --url http://localhost:$COLLECTOR_PORT
+# Start Cloudflare Tunnel (named tunnel — stable URL)
+exec cloudflared tunnel run uk3d-collector
