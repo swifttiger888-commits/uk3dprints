@@ -44,8 +44,14 @@ export function getOrganizationSchema(siteUrl, siteName, logoUrl) {
  *
  * Note: Offers are intentionally omitted during pre-launch.
  * Once real pricing is confirmed and displayed on-page,
- * add back an `offers` block with price, priceCurrency,
- * availability, and shippingDetails.
+ * add back an `offers` block by attaching getOfferSchema():
+ *
+ *   schema.offers = getOfferSchema(price, currency, availability);
+ *
+ * getOfferSchema() includes hasMerchantReturnPolicy, shippingDestination,
+ * and deliveryTime matching the site's published policies — do NOT hand-
+ * write offers blocks or you'll repeat the drift that caused GSC issues.
+ * See getOfferSchema() docs for parameter details.
  */
 export function getProductSchema(product, productUrl, imageUrl, siteName) {
   const schema = {
@@ -77,6 +83,68 @@ export function getProductSchema(product, productUrl, imageUrl, siteName) {
   }
 
   return schema;
+}
+
+// ── Offer Schema ──────────────────────────────────────────────────
+
+/**
+ * Build the full offers block for a Product schema.
+ *
+ * Includes hasMerchantReturnPolicy (14-day returns, free),
+ * shippingDetails with shippingDestination (GB) and
+ * deliveryTime (1-2 day handling + 1 day transit).
+ *
+ * Once real pricing is confirmed and you're ready to surface
+ * offers, attach this to the product schema:
+ *
+ *   schema.offers = getOfferSchema('14.00', 'GBP', 'https://schema.org/InStock');
+ *
+ * @param {string} price - e.g. '14.00'
+ * @param {string} currency - ISO 4217, e.g. 'GBP'
+ * @param {string} availability - e.g. 'https://schema.org/InStock' or 'PreOrder'
+ */
+export function getOfferSchema(price, currency, availability) {
+  return {
+    '@type': 'Offer',
+    price,
+    priceCurrency: currency,
+    availability,
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      applicableCountry: 'GB',
+      returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+      merchantReturnDays: 14,
+      returnMethod: 'https://schema.org/ReturnByMail',
+      returnFees: 'https://schema.org/FreeReturn',
+    },
+    shippingDetails: {
+      '@type': 'OfferShippingDetails',
+      shippingRate: {
+        '@type': 'MonetaryAmount',
+        value: '1.55',
+        currency: 'GBP',
+      },
+      shippingDestination: {
+        '@type': 'DefinedRegion',
+        addressCountry: 'GB',
+      },
+      deliveryTime: {
+        '@type': 'ShippingDeliveryTime',
+        handlingTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 1,
+          maxValue: 2,
+          unitCode: 'DAY',
+        },
+        transitTime: {
+          '@type': 'QuantitativeValue',
+          minValue: 1,
+          maxValue: 1,
+          unitCode: 'DAY',
+        },
+      },
+    },
+  };
 }
 
 // ── BreadcrumbList Schema ──────────────────────────────────────────
