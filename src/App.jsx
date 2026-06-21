@@ -59,6 +59,10 @@ function App() {
         </Helmet>
 
         <Navbar />
+        {/* Development banner */}
+        <div className="bg-red-600 text-white text-center text-xs font-medium py-1.5 tracking-wide">
+          ⚠ Website under development — not accepting orders yet
+        </div>
         <main>
           {view === 'detail' ? (
             <ProductDetail productId={productId} onBack={goBack} />
