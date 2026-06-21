@@ -8,8 +8,8 @@ export async function onRequest(context) {
   const response = await context.next();
   const url = new URL(context.request.url);
 
-  // Root HTML — short edge cache + stale-while-revalidate
-  if (url.pathname === '/' || url.pathname === '/index.html') {
+  // Root and product HTML pages — short edge cache + stale-while-revalidate
+  if (url.pathname === '/' || url.pathname === '/index.html' || url.pathname.startsWith('/product/')) {
     response.headers.set(
       'Cache-Control',
       'public, max-age=3600, stale-while-revalidate=86400'

@@ -1,6 +1,13 @@
 # Cloudflare Pages headers
 # HTML: cache at edge for 1 hour, stale-while-revalidate for 1 day
+/
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
 /index.html
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Product detail pages: moderate cache (pre-launch static content)
+/product/*
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 
 # Sitemap: cache for 4 hours
